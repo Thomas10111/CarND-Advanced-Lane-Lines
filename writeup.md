@@ -62,7 +62,7 @@ See cell four, function `hls_select()`.
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform is in cell seven, the function is called 'corners_unwarp(undistorted_img, mtx, dist)', lines 1-16.
+The code for my perspective transform is in cell three, the function is called 'corners_unwarp(undistorted_img, mtx, dist)', lines 1-16.
 The `corners_unwarp()` function takes as inputs an undistorted image `undistorted_img`, as well as source (`src`) and destination (`dst`) points.
  I chose the hardcode the source and destination points in the following manner:
 
@@ -95,16 +95,16 @@ I verified that my perspective transform was working as expected by drawing the 
 <img src="top_down_curved.jpg" alt="drawing" width="400"/>
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
-In cell seven, function `fit_polynomial()` first calculates a histogram to find the initial starting points lanes, after that applies the sliding window approach to find the points of the lines, and finally fits the lines through the found points.
+In cell three, function `fit_polynomial()` first calculates a histogram to find the initial starting points lanes, after that applies the sliding window approach to find the points of the lines, and finally fits the lines through the found points.
 
 <img src="sliding_window.jpg" alt="sliding window" width="400"/>
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-The code to calculate the curvature is also in cell seven. The function is the last function in cell seven and called `measure_curvature_real()`.
+The code to calculate the curvature is also in cell three. The function is the last function in cell three and called `measure_curvature_real()`.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
-The function that maps the lines back onto the road is called `draw_lines()` and is also in cell seven.
+The function that maps the lines back onto the road is called `draw_lines()` and is also in cell three.
 
 <img src="projected_back.jpg" alt="projected back" width="400"/>
 
